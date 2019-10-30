@@ -1,0 +1,32 @@
+///////////////
+// Tutorial //
+/////////////
+= Tutorial
+#IMAGE: assets/img/tutorial.png
+Wilkommen im Tutorial von "HeavenOrHell".
+    + Weiter 
+        -> W1
+= W1
+In diesem Spiel kannst du dein Scenario und Geschichte Selbst entscheiden.
+    + Weiter
+        -> W2
+= W2
+Es sind Gespräche zu lesen nd du kannst dann entscheiden wie es weiter geht.
+    + Weiter
+        -> W3
+= W3
+Am Schluß kannst du dann auch den Berreich wechseln wo deine Geschichte Spielt.
+    + Weiter
+        -> W4
+= W4
+Bist du Bereit??
+Oder das Tutorial noch mal von vorne??
+    + Bereit
+        #CLEAR
+        -> HoH
+    + Noch nicht Bereit
+        #CLEAR
+        -> HoH
+    + Tutorial Beginnen
+        #CLEAR
+        -> Tutorial

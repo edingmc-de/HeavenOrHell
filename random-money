@@ -1,0 +1,38 @@
+= randommoney
+#IMAGE: assets/img/logo.png
+#IMAGE: assets/img/random/rm.png
+    + Start
+        #CLEAR
+        -> Random
+    + Dein aktueller Kontostand
+        #CLEAR
+        ->Kontostand
+    + Hauptmenü
+        #CLEAR
+        -> HoH
+
+= Random
+#IMAGE: assets/img/logo.png
+#IMAGE: assets/img/random/Random.png
+Du hast {rand} Euro gewonnen!
+~ inv_geld += rand
+    + Nochmal
+        #CLEAR
+        -> Random
+    + Zurück
+        #CLEAR
+        -> HoH
+    + Kontostand
+        #CLEAR
+        -> Kontostand
+    
+= Kontostand
+#IMAGE: assets/img/logo.png
+#IMAGE: assets/img/random/Kontostand.png
+Dein Guthaben beträgt: {inv_geld} Euro.
+    + Zurück
+        #CLEAR
+        -> randommoney
+    + Hauptmenü
+        #CLEAR
+        -> HoH

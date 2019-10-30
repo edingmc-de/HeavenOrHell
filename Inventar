@@ -1,0 +1,24 @@
+= InventarHE
+#IMAGE: assets/img/hell/Hell.png
+#IMAGE: assets/img/inventar.png
+
+Du hast noch {live} Lebenspunkte
+
+Du hast das Holz Schwert {inv_wooden_sword} Mal.
+
+Du hast das Diamant Schwert {inv_diamond_sword} Mal.
+
+Du hast das Deamon Schwert {inv_deamon_sword} Mal.
+
+
+= InventarHI
+#IMAGE: assets/img/heaven/Heaven.png
+#IMAGE: assets/img/inventar.png
+
+Du hast noch {live} Lebenspunkte
+
+Du hast das Holz Schwert {inv_wooden_sword} Mal.
+
+Du hast das Diamant Schwert {inv_diamond_sword} Mal.
+
+Du hast das Deamon Schwert {inv_angel_sword} Mal.

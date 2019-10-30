@@ -1,0 +1,121 @@
+////////////    
+// Hölle //
+//////////
+= Hell
+#IMAGE: assets/img/hell/Hell.png
+Du hast dich für die Hölle entschieden, bist du dir Sicher dass du in der Hölle Spielen willst??
+    + Ja
+        #CLEAR
+        -> JA2
+    + Nein
+        #CLEAR
+        -> HoH
+= JA2
+Hell
++   LOS!
+    -> Los2
+= Los2
+Wilkommen, in der Hölle.
+#IMAGE: assets/img/hell/lucifer.jpg
+Ich bin {devil}.
+    + Weiter!
+        #CLEAR
+        -> HE1
+= HE1
+Gut, dass du dich für die Hölle entschieden hast!
+Wir können deine Helfe gut gebrauchen!
+    + Weiter!
+    #CLEAR
+        -> HE2
+= HE2
+Wir stecken gerade mitten im Krieg gegen den Himmel.
+Kannst du bitte etwas im Shop ausrüstung Kaufen um im Krieg später zu gewinnen??
+        + Weiter!
+        #CLEAR
+            -> HE3
+= HE3
+Hier hast du 1000 Euro.
+Du kannst dich auch erst umschauen und dann den Krieg beginnen!
+Wir sehen uns Später wieder
+
+    + Shop
+        #CLEAR
+        -> ShopHE
+    + Umschauen
+        #CLEAR
+        -> UmschauenHE
+
+= ShopHE
+#IMAGE: assets/img/hell/HellShop.png
+Dein Guthaben: {inv_geld} Euro!
+    + Waffen
+        #CLEAR
+        -> Waffen
+    + Essen
+        #CLEAR
+        -> Essen
+    + zurück
+        #CLEAR
+        -> HE3
+= Waffen
+#IMAGE: assets/img/hell/HellShop.png
+#IMAGE: assets/img/hell/Waffen.png
+Dein Guthaben: {inv_geld} Euro!
+Mit den Waffen hast du bessere Chancen auf den Sieg!
+    + Holz Schwert
+        {inv_geld >= shop_price_wooden_sword}
+        ~ inv_geld -= shop_price_wooden_sword
+        ~ inv_wooden_sword += 1
+    + Diamant Schwert
+        {inv_geld >= shop_price_diamond_sword}
+        ~ inv_geld -= shop_price_diamond_sword
+        ~ inv_diamond_sword += 1
+    + Engel Schwert
+        {inv_geld >= shop_price_deamon_sword}
+        ~ inv_geld -= shop_price_deamon_sword
+        ~ inv_deamon_sword += 1
+    + Zurück
+        #CLEAR
+        -> ShopHE
+
+= Essen
+#IMAGE: assets/img/hell/HellShop.png
+#IMAGE: assets/img/hell/Essen.png
+Dein Guthaben: {inv_geld} Euro!
+
+Mit Nahrung kannst du dich im Kampf heilen!
+    + Fleisch
+        {inv_geld >= shop_price_meat}
+        ~ inv_geld -= shop_price_meat
+        ~ inv_meat += 1
+    + Kafee
+        {inv_geld >= shop_price_cofee}
+        ~ inv_geld -= shop_price_cofee
+        ~ inv_coffe += 1
+    + Zurück
+        #CLEAR
+        -> ShopHE
+
+
+
+= UmschauenHE
+    + Zu Lucifer
+        -> Lucifer
+    + Mit Deamonen sprechen
+        -> Deamon
+    + Team Bilden
+        -> TeamHE
+    + Inventar
+        -> InventarHE
+    
+= Lucifer
+    +
+
+
+= Deamon
+    +
+
+
+= TeamHE
+    +
+

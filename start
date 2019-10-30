@@ -1,0 +1,14 @@
+/////////////////////////
+// Eigentliches Spiel //
+///////////////////////
+= Start        
+#IMAGE: assets/img/logo.png
+    Wähle dein Bereich!
+    
+    + Heaven
+        #CLEAR
+        -> Heaven
+        
+    + Hell
+        #CLEAR
+        -> Hell
