@@ -14,8 +14,10 @@
 = Random
 #IMAGE: assets/img/logo.png
 #IMAGE: assets/img/random/Random.png
-Du hast {rand} Euro gewonnen!
-~ inv_geld += rand
+~ temp zahl = RANDOM(0, 100)
+~ inv_geld += zahl
+Du hast {zahl} Euro gewonnen!
+Dein Guthaben: {inv_geld} Euro!
     + Nochmal
         #CLEAR
         -> Random

@@ -6,7 +6,7 @@
     // Global tags - those at the top of the ink file
     // We support:
     //  # theme: dark
-    //  # author: Your Name
+    //  # author: YourNameHere
     var globalTags = story.globalTags;
     if( globalTags ) {
         for(var i=0; i<story.globalTags.length; i++) {

@@ -1,0 +1,161 @@
+= KampfHE
+Es ist soweit!
+Der Kampf zwischen Himmel und Hölle beginnt...
+
+{devil}: Hallo Vater...
+    + weiter    
+        #CLEAR
+        -> WFHE1
+
+= WFHE1
+{devil}: Du wolltest ja nicht auch mich hören.
+{devil}: Ich habe die mächtigste Arme im Universum!!!
+    
+    + Weiter
+    #CLEAR
+        -> WFHE2
+
+= WFHE2
+{devil}: Wir werden jetzt den Krieg beginnen!!!!!!!!!!!!!!!!!!!!
+    + Kampf
+        -> FightHEAus
+        
+= FightHEAus
+Welche Waffe willst du benutzen??
+        + Holz Schwert
+        {1 >= inv_wooden_sword:
+            ->FightHEH
+        - else:
+        Du besitzt diese Waffe Nicht!
+            -> FightHEAus        
+        }
+        + Diamant Schwert
+        {1 >= inv_diamond_sword:
+            -> FightHEDI
+        - else:
+        Du besitzt diese Waffe Nicht!
+            -> FightHEAus    
+        }
+        + Deamon Schwert
+            {1 >= inv_deamon_sword:
+            -> FightHED
+        - else:
+        Du besitzt diese Waffe Nicht!
+            -> FightHEAus    
+        }
+
+
+// Holz Schwert //
+
+= FightHEH
+Gott hat noch {live_god} Leben. Ich habe noch {live} Leben.
+Kämpfe gegen Gott!
+    ~ temp angreifen = RANDOM(1, inv_kp_wooden_sword)
+    + Angreifen 
+        ++ Mit Schwert Angreifen
+            Ich habe {angreifen} Schaden zugefügt!
+            ~live_god -= angreifen
+            {live_god > 0:
+            
+            #CLEAR
+                -> godHEH
+            - else:
+            Ich habe Gott Besiegt!!!!!!!!
+            Der Himmel Verliert!
+            #CLEAR
+                -> Sieg
+            }
+= godHEH
+     ~ temp schaden = RANDOM(1, 50)
+     Gott macht mir {schaden} Schaden!
+     ~ live -= schaden
+    {live > 0:
+            #CLEAR
+                -> FightHEH
+            - else:
+            Scheiße, Gott hat die Hölle übernommen!
+            #CLEAR
+                -> Tot
+            }
+
+
+
+// Diamat Schwert //
+
+
+= FightHEDI            
+    Gott hat noch {live_god} Leben. Ich habe noch {live} Leben.
+Kämpfe gegen Gott!
+    ~ temp schaden = RANDOM(1, 50)
+    ~ temp angreifen = RANDOM(10, inv_kp_diamond_sword)
+    + Angreifen 
+        ++ Mit Schwert Angreifen
+            Ich habe {angreifen} Schaden zugefügt!
+            {live_god > 0:
+            #CLEAR
+                -> godHEH
+            - else:
+            Ich habe Gott Besiegt!!!!!!!!
+            Der Himmel Verliert!
+            #CLEAR
+                -> Sieg
+            }
+= godHEDI
+     ~ temp schaden = RANDOM(1, 50)
+     ~ temp engel_schaden = RANDOM(1, 50) * 2
+     {shuffle:
+        - Gott Schlägt zu und macht bei mir {schaden} Schaden!
+        - Gott  setzt seine komplette macht ein und macht mir {schaden} Schaden!
+        - Gott schickt seine Engel und alle machen mir {engel_schaden} Schaden!
+        - else:
+     }
+    {live > 0:
+            #CLEAR
+                -> FightHEDI
+            - else:
+            Scheiße, Gott hat die Hölle übernommen!
+            #CLEAR
+                -> Tot
+            }
+
+    
+// Deamon Schwet
+    
+= FightHED
+    Gott hat noch {live_god} Leben. Ich habe noch {live} Leben.
+Kämpfe gegen Gott!
+    ~ temp schaden = RANDOM(1, 50)
+    ~ temp angreifen = RANDOM(20, inv_kp_deamon_sword)
+    + Angreifen 
+        ++ Mit Schwert Angreifen
+            Ich habe {angreifen} Schaden zugefügt!
+            {live_god > 0:
+            #CLEAR
+                -> godHED
+            - else:
+            Ich habe Gott Besiegt!!!!!!!!
+            Der Himmel Verliert!
+            #CLEAR
+                -> Sieg
+            }
+= godHED
+     ~ temp schaden = RANDOM(1, 50)
+     ~ temp engel_schaden = RANDOM(1, 50) * 2
+     {shuffle:
+        - Gott Schlägt zu und macht bei mir {schaden} Schden!
+        - Gott  setzt seine komplette macht ein und macht mir {schaden} Schaden!
+        - Gott schickt seine Engel und alle machen mir {engel_schaden} Schaden!
+        - else:
+        
+     }
+    {live > 0:
+            #CLEAR
+                -> FightHED
+            - else:
+            Scheiße, Gott hat die Hölle übernommen!
+            #CLEAR
+                -> Tot
+            }
+
+    
+    

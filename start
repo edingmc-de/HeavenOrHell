@@ -1,7 +1,10 @@
 /////////////////////////
 // Eigentliches Spiel //
 ///////////////////////
-= Start        
+-> Start//.Intro
+
+
+=== Start        
 #IMAGE: assets/img/logo.png
     Wähle dein Bereich!
     
@@ -12,3 +15,7 @@
     + Hell
         #CLEAR
         -> Hell
+
+= Intro
+{ Als Gott und seine Geliebte das Universum erschuf erschuf er nicht nur das Universum sondern auch Himmel und Hölle. | NAch einen Streit zwischen Lucifer und Gott hat Gott sein Vater Lucifer in die Hölle für alle ewig keit verbannt. | Nach seinem Urlaub in LA (Los Angeles, California, USA) beschloß Lucifer sich an seinen Vater zu Rächen und plant einen Krieg!}
+    -> Start

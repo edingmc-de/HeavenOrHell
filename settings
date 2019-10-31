@@ -19,17 +19,27 @@ VAR devil = "Lucifer"
 VAR god = "Gott"
 
 // Inventar und Leben //
-VAR live = 1000
-VAR inv_geld = 1000
+VAR live = 20
+VAR live_max = 200
+VAR inv_geld = 100
+VAR inv_geld_max = 10000
 VAR inv_wooden_sword = 0
+VAR inv_kp_wooden_sword = 10
 VAR inv_diamond_sword = 0
+VAR inv_kp_diamond_sword = 25
 // Himmel //
 VAR inv_angel_sword = 0
+VAR inv_kp_angel_sword = 1000
+VAR live_god = 10000
 // Hölle //
 VAR inv_deamon_sword = 0
+VAR inv_kp_deamon_sword = 1000
+VAR live_lucifer = 10000
 // Essen und Getränke //
 VAR inv_meat = 0
+VAR inv_live_meat = 20
 VAR inv_coffe = 0
+VAR inv_live_cofee = 40
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
@@ -50,13 +60,7 @@ VAR shop_price_diamond_sword = 40
 // Hölle //
 VAR shop_price_deamon_sword = 100
 // Himmel //
-VAR shop_price_angel_sword = 100
+VAR shop_price_angel_sword = 10000
 
 
 ////////////////////////////////////////////////////////////////////////////////////////
-
-
-/////////////////////
-// temp-VAriabeln //
-///////////////////
-~ temp rand = RANDOM(0, 100)

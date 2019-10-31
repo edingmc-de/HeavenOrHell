@@ -4,84 +4,88 @@
 = Heaven
 #IMAGE: assets/img/heaven/Heaven.png
 Du hast dich für den Himmel entschieden, bist du dir Sicher dass du den Himmer Spielen willst??
-    + Ja
+    + [Ja]
     #CLEAR
         -> JA1
-    + Nein
+    + [Nein]
     #CLEAR
         -> HoH
 = JA1
 Heaven
-+   LOS!
++   [LOS!]
     -> Los1
 = Los1
 Wilkommen im Himmel, Spieler.
 #IMAGE: assets/img/heaven/gott.jpg
 Ich bin {god}.
-    + Weiter!
+    + [Weiter!]
         #CLEAR
         -> HI1
 = HI1 
 Gut, dass du dich für den Himmel entschieden hast!
 Wir können deine Helfe gut gebrauchen!
-    + Weiter!
+    + [Weiter!]
         #CLEAR
         -> HI2
     
 = HI2
 Wir stecken gerade mitten im Krieg gegen die Hölle.
-    + weiter    
+    + [Weiter!]   
         #CLEAR
         -> HI3
 = HI3    
 Kannst du bitte etwas im Shop ausrüstung Kaufen um im Krieg später zu gewinnen??
 Hier hast du 1000 Euro.
-    + weiter
+    + [Weiter!]
         #CLEAR
         -> HI4
 = HI4
 Du kannst dich auch erst umschauen und dann den Krieg beginnen!
 Wir sehen uns Später wieder
 
-    + Shop
+    + [Shop]
         #CLEAR
         -> ShopHI
-    + Umschauen
+    + [Umschauen]
         #CLEAR
         -> UmschauenHI
 
 = ShopHI
 #IMAGE: assets/img/heaven/HeavShop.png
 Dein Guthaben: {inv_geld} Euro!
-        + Waffen
+        + [Waffen]
         #CLEAR
             -> WaffenHI
-        + Essen
+        + [Essen]
         #CLEAR
             -> EssenHI
-        + zurück
+        + [zurück]
         #CLEAR
             -> HI2
             
 = WaffenHI
-#IMAGE: assets/img/hell/HeavShop.png
-#IMAGE: assets/img/hell/Waffen.png
+#IMAGE: assets/img/heaven/HeavenShop.png
+#IMAGE: assets/img/heaven/Waffen.png
 Dein Guthaben: {inv_geld} Euro!
 
 Mit den Waffen hast du bessere Chancen auf den Sieg!
-    + Holz Schwert
+    + [Holz Schwert]
         {inv_geld >= shop_price_wooden_sword}
         ~ inv_geld -= shop_price_wooden_sword
         ~ inv_wooden_sword += 1
-    + Diamant Schwert
+        -> WaffenHI
+    + [Diamant Schwert]
         {inv_geld >= shop_price_diamond_sword}
         ~ inv_geld -= shop_price_diamond_sword
         ~ inv_diamond_sword += 1
-    + Engel Schwert
+        -> WaffenHI
+    + [Engel Schwert]
         {inv_geld >= shop_price_angel_sword}
         ~ inv_geld -= shop_price_angel_sword
         ~ inv_angel_sword += 1
-        
+        -> WaffenHI
+    + [Zurück]
+        -> WaffenHI
 
 = EssenHI
 #IMAGE: assets/img/heaven/HeavShop.png
@@ -89,34 +93,32 @@ Mit den Waffen hast du bessere Chancen auf den Sieg!
 Dein Guthaben: {inv_geld} Euro!
 
 Mit Nahrung kannst du dich heilen!
-    + Fleisch
+    + [Fleisch]
         {inv_geld >= shop_price_meat}
         ~ inv_geld -= shop_price_meat
         ~ inv_meat += 1
-    + Kafee
+        -> EssenHI
+    + [Kafee]
         {inv_geld >= shop_price_cofee}
         ~ inv_geld -= shop_price_cofee
         ~ inv_coffe += 1
+        -> EssenHI
             
 = UmschauenHI
- + Zu Gott
+    + [Zu Gott]
         -> God
-    + Mit den Engeln sprechen
+    + [Mit den Engeln sprechen]
         -> Engel
-    + Team Bilden
-        -> TeamHI
-    + Inventar
+    + [Inventar]
         -> InventarHI
+    + [Shop]
+        -> ShopHI
     
 = God
     +
     
     
 = Engel
-    +
-    
-    
-= TeamHI
     +
 
 

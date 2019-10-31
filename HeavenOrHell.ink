@@ -10,7 +10,11 @@ INCLUDE random-money
 INCLUDE Inventar
 INCLUDE KampfHE
 INCLUDE KampfHI
-INCLUDE abspann
+INCLUDE outro
+INCLUDE totsieg
+
+
+
 
 
 
@@ -27,6 +31,7 @@ INCLUDE abspann
 === HoH
 //#IMAGE: edingmc.jpg
 #IMAGE: assets/img/logo.png
+
 ///////////////////
 // HeavenOrHell //
 /////////////////
@@ -39,4 +44,4 @@ INCLUDE abspann
         -> Tutorial
     + Geld Gewinn Maschine
         #CLEAR
-        -> randommoney
+         -> randommoney

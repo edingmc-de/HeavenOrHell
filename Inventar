@@ -2,6 +2,8 @@
 #IMAGE: assets/img/hell/Hell.png
 #IMAGE: assets/img/inventar.png
 
+Dein Geld: {inv_geld} Euro.
+
 Du hast noch {live} Lebenspunkte
 
 Du hast das Holz Schwert {inv_wooden_sword} Mal.
@@ -10,10 +12,14 @@ Du hast das Diamant Schwert {inv_diamond_sword} Mal.
 
 Du hast das Deamon Schwert {inv_deamon_sword} Mal.
 
++ Zurück
+    -> UmschauenHE
 
 = InventarHI
 #IMAGE: assets/img/heaven/Heaven.png
 #IMAGE: assets/img/inventar.png
+
+Dein Geld: {inv_geld} Euro.
 
 Du hast noch {live} Lebenspunkte
 
@@ -22,3 +28,6 @@ Du hast das Holz Schwert {inv_wooden_sword} Mal.
 Du hast das Diamant Schwert {inv_diamond_sword} Mal.
 
 Du hast das Deamon Schwert {inv_angel_sword} Mal.
+
++ Zurück
+    -> UmschauenHI
